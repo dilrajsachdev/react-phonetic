@@ -1,3 +1,0 @@
-{
-    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}"
-}
