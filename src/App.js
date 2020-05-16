@@ -15,7 +15,7 @@ function App() {
 
     return (
         <div>
-            <UserInput clearText={clearTextHandler} change={setUserText} />
+            <UserInput clearText={clearTextHandler} change={setUserText} userText={userText} />
 
             {userText
                 ? userText.split(" ").map((char, index) => {
