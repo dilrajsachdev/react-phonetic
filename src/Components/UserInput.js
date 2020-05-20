@@ -5,7 +5,7 @@ import ClearIcon from "@material-ui/icons/Clear";
 const UserInput = (props) => {
     return (
         <div className={props.classes.root}>
-            <Typography variant="h4" align="center">PHONETIC TEXT</Typography>
+            <Typography variant="h4" align="center" color="secondary">PHONETIC TEXT</Typography>
             <Paper className={props.classes.paper}>
                 <IconButton onClick={() => props.clearText()}>
                     <ClearIcon />
@@ -47,5 +47,3 @@ const styles = (theme) => ({
 });
 
 export default withStyles(styles)(UserInput);
-
-// export default UserInput

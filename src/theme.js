@@ -1,6 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import indigo from "@material-ui/core/colors/indigo";
-import orange from "@material-ui/core/colors/orange";
+import { deepOrange, purple } from '@material-ui/core/colors';
 // import CssBaseline from "@material-ui/core/CssBaseline";
 // import { red } from '@material-ui/core/colors';
 
@@ -25,14 +24,14 @@ import orange from "@material-ui/core/colors/orange";
 const theme = createMuiTheme({
     palette: {
       primary: {
-        light: indigo[500],
-        main: indigo[700],
-        dark: indigo[900]
+        light: deepOrange[500],
+        main: deepOrange[700],
+        dark: deepOrange[900]
       },
       secondary: {
-        light: orange[300],
-        main: orange[500],
-        dark: orange[700]
+        light: purple[300],
+        main: purple[500],
+        dark: purple[700]
       }
     },
     typography: {

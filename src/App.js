@@ -1,33 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import withRoot from "./withRoot";
-import { Grid } from "@material-ui/core";
 
-import PhoneticChar from "./Components/PhoneticChar";
-import UserInput from "./Components/UserInput";
+import { Route, Switch } from "react-router-dom";
+import Phonetic from "./Containers/Phonetic";
+import RandomMeme from "./Containers/RandomMeme";
 
 function App() {
-    const [userText, setUserText] = useState();
-
-    const clearTextHandler = () => {
-      setUserText("")
-    }
+    
 
     return (
         <div>
-            <UserInput clearText={clearTextHandler} change={setUserText} userText={userText} />
-
-            {userText
-                ? userText.split(" ").map((char, index) => {
-                      return (
-                          <Grid container direction="row" justify="center" alignItems="center" key={Math.random()}>
-                              {char.split("").map((char, index) => {
-                                return <PhoneticChar char={char} key={Math.random()} />
-                              })}
-                          </Grid>
-                      );
-                  })
-                : ""}
+        <Switch>
+                <Route path="/meme" component={RandomMeme} />
+                <Route path="/" exact component={Phonetic} />
+                {/* <Redirect to="/" /> */}
+            </Switch>
+        
         </div>
     );
 }
